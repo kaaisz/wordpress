@@ -7,6 +7,7 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<h3>Personal Work</h3>
 
 			<div id="tile-list">
 					<?php
@@ -28,18 +29,25 @@
 						endwhile;
 				echo '</div>';
 
-					the_posts_pagination( array(
-						'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) .
-						'<span class="screen-reader-text">'
-						// . __( 'Previous page', 'twentyseventeen' )
-						. '</span>',
-						'next_text' => '<span class="screen-reader-text">'
-						. __( 'Next page', 'twentyseventeen' )
-						. '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-						'before_page_number' => '<span class="meta-nav screen-reader-text">'.'Page'
-						// . __( 'Page', 'twentyseventeen' )
-						. ' </span>',
-					) );
+					// the_posts_pagination( array(
+					// 	'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) .
+					// 	'<span class="screen-reader-text">'
+					// 	// . __( 'Previous page', 'twentyseventeen' )
+					// 	. '</span>',
+					// 	'next_text' => '<span class="screen-reader-text">'
+					// 	. __( 'Next page', 'twentyseventeen' )
+					// 	. '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
+					// 	'before_page_number' => '<span class="meta-nav screen-reader-text">'.'Page'
+					// 	// . __( 'Page', 'twentyseventeen' )
+					// 	. ' </span>',
+					// ) );
+
+					echo'<a class="seemore" href="http://localhost/wordpress/category/personal-work/">See Personal Work ></a>';
+					echo'<br><p></p><br>';
+					echo'<h3>Client Work</h3>
+							<p>-Password Required-</p>
+							<a class="seemore" href="http://localhost/wordpress/category/client-work/">See Client Work ></a>
+							<br><p></p><br>';
 
 			else :
 
@@ -61,7 +69,7 @@
     </p>
     <h2 id="contact" class="page-title">Contact</h2>
     <p>Please let me know if you're impressed or interested.</p>
-    <button>Tap Here</button>
+    <a href="http://localhost/wordpress/contact"><button>Tap Here</button></a>
   </header>
 </div><!-- .wrap -->
 
