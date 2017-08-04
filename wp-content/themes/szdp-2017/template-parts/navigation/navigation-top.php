@@ -10,7 +10,10 @@
 
 ?>
 <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentyseventeen' ); ?>">
-	<img class="logo-nav" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/logo.svg"></img>
+	<a class="logo-nav a" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<img class="logo-nav" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/logo.svg">
+		<p>SZDP / Kaai Suzuki</p>
+	</a>
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
 		<?php
 		echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) );
