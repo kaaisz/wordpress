@@ -73,17 +73,25 @@ p {
     color: #222;
     display: none;
     font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 1.8rem;
     font-weight: 800;
     line-height: 1.5;
     margin: 1px 0 2px auto;
-    padding: 1em;
+    padding: 0.5em;
     text-shadow: none;
 }
 
 .menu-toggle:focus {
     outline: none;
 }
+
+.logo-nav {
+    width: 3rem;
+    margin: 0.5rem 1.5rem;
+    position: absolute;
+    left: 0;
+}
+
 
 /*----------posts-archive----------*/
 
@@ -128,6 +136,15 @@ p {
 }
 
 /*----------Pagenation----------*/
+.pagination, .comments-pagination {
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    padding: 2em 0 5em;
+    text-align: center;
+}
+
 .page-numbers.current {
     color: #aaa;
     display: inline-block;
@@ -199,6 +216,23 @@ p {
         position: relative;
     }
 
+    .navigation-top {
+        bottom: 0;
+        font-size: 14px;
+        font-size: 0.875rem;
+        left: 0;
+        position: relative;
+        right: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .logo-nav{
+      left:0;
+      top:0;
+      margin: 0.5rem 2.5rem;
+    }
+
     .site-header .navigation-top .menu-scroll-down {
         color: #767676;
         top: -5.5rem;
@@ -208,6 +242,34 @@ p {
         bottom: 0;
         text-align: center;
     }
+
+    /*調整中*/
+    .menu-toggle span{
+      display: block;
+      position: absolute;
+      height: 2px;
+      width:100%;
+      background:#666;
+      left:0;
+      -webkit-transition:.35s ease-in-out;
+      -moz-transition:.35s ease-in-out;
+      -ms-transition:.35s ease-in-out;
+      -o-transition:.35s ease-in-out;
+      transition:.35s ease-in-out;
+    }
+
+    .menu-toggle span:nth-child(1){
+      top:0;
+    }
+
+    .menu-toggle span:nth-child(2){
+      top:11px;
+    }
+
+    .menu-toggle span:nth-child(3){
+      top:22px;
+    }
+    /*調整中*/
 
     .js .main-navigation ul, .js .main-navigation ul ul, .js .main-navigation > div > ul {
         display: block;
