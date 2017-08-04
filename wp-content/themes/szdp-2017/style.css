@@ -1,0 +1,156 @@
+/*
+ Theme Name:   Twenty Seventeen Child
+ Theme URI:    http://example.com/twenty-seventeen-child/
+ Description:  Twenty Seventeen Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     twentyseventeen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-seventeen-child
+*/
+/*"template - 親となるテーマ"*/
+/*オリジナルとして追加したい要素のみこのCSSに記述*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.entry-content ul, ol {
+    margin: 0 0 1.5em;
+    padding-left: 1.75rem;
+}
+
+#masthead .wrap {
+    position: relative;
+    text-align: center;
+}
+
+.site-header {
+    background-color: #fff;
+    position: relative;
+}
+
+.site-logo{
+  width:305px;
+  height:auto;
+}
+
+.page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title {
+    color: #222;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.site-branding.close{
+  display: none;
+  padding: 0;
+}
+
+/*--------------Footer--------------*/
+.widget {
+    padding-bottom: 2em;
+}
+
+.widget ul li, .widget ol li {
+    border:none;
+    padding:0.3rem;
+}
+
+.site-footer .widget-area {
+    padding: 1em 0;
+}
+
+/*--------------Blog Page--------------*/
+.single .byline, .group-blog .byline {
+    display: none;
+}
+
+#comments.comments-area{
+  display: none;
+}
+
+.nav-subtitle{
+  display: none;
+}
+
+@media screen and (min-width: 48em){
+    .site-header .menu-scroll-down .icon {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: white;
+    }
+
+    .has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-video .custom-header-media iframe, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        top: 0;
+        -ms-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+    }
+
+    .site-header .navigation-top .menu-scroll-down {
+        color: #767676;
+        top: -5.5rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .js .main-navigation ul, .js .main-navigation ul ul, .js .main-navigation > div > ul {
+        display: block;
+        text-align: right;
+    }
+
+    .blog:not(.has-sidebar) #primary article,
+    .archive:not(.page-one-column):not(.has-sidebar) #primary article,
+    .search:not(.has-sidebar) #primary article,
+    .error404:not(.has-sidebar) #primary .page-content,
+    .error404.has-sidebar #primary .page-content,
+    body.page-two-column:not(.archive) #primary .entry-content,
+    body.page-two-column #comments {
+        float: right;
+        width: 100%;
+    }
+
+    body:not(.has-sidebar):not(.page-one-column) .page-header,
+    body.has-sidebar.error404 #primary .page-header,
+    body.page-two-column:not(.archive) #primary .entry-header,
+    body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+        float: left;
+        width: 100%;
+    }
+
+    /*----------Pagenation----------*/
+    .navigation.pagination {
+        clear: both;
+        float: right;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 30em){
+    .site-branding {
+        padding: 8em 0;
+    }
+}
