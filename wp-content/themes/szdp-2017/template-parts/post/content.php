@@ -11,7 +11,7 @@
  */
 
 ?>
-<!-- 記事一覧表示用のファイル -->
+<!-- 「カテゴリーの」記事一覧表示用のファイル -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		if ( is_sticky() && is_home() ) :

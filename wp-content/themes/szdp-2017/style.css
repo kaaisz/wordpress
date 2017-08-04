@@ -58,6 +58,49 @@
   padding: 0;
 }
 
+/*----------posts-archive----------*/
+
+#tile-list {
+		width: 100%;
+		overflow: hidden;
+}
+.tile-entry {
+		float: left;
+		margin: 0 1% 1em;/*余白（上、左右、下）*/
+		width: 48%;/*横2列表示*/
+		padding-bottom: 0;
+		background-color: #fff;/*各記事の背景色*/
+		/*border: 1px solid #eee;/*各記事の枠線*/
+		/*box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);/*各記事の影*/
+}
+@media screen and (min-width: 30em) {
+.tile-entry {
+		width: 31.33%; /*横3列表示*/
+}
+}
+@media screen and (min-width: 48em) {
+.tile-entry {
+		width: 48%;/*横2列表示*/
+}
+}
+@media screen and (min-width: 60em) {
+.tile-entry {
+		width: 31.33%; /*横3列表示*/
+}
+}
+#tile-list .entry-title {
+	font-size: 12px;/*タイトル文字サイズ*/
+	font-size: 0.75rem;/*タイトル文字サイズ*/
+}
+#tile-list .entry-header {
+	padding: 0.5em 8% 0.5em;/*投稿日とタイトルの周辺余白*/
+}
+.post-thumbnail {
+	margin-bottom: 0em;
+	font-size: 0px;
+}
+
+
 /*--------------Footer--------------*/
 .widget {
     padding-bottom: 2em;
