@@ -23,30 +23,30 @@
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
+				<div class="entry-header">
+					<?php
+						if ( 'post' === get_post_type() ) :
+							echo '<div class="entry-meta">';
+								if ( is_single() ) :
+									twentyseventeen_posted_on();
+								else :
+									echo twentyseventeen_time_link();
+									twentyseventeen_edit_link();
+								endif;
+							echo '</div><!-- .entry-meta -->';
+						endif;
+
+						if ( is_single() ) {
+							the_title( '<h1 class="entry-title">', '</h1>' );
+						} else {
+							the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+						}
+					?>
+				</div><!-- .entry-header -->
 			</a>
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
-	<header class="entry-header">
-		<?php
-			if ( 'post' === get_post_type() ) :
-				echo '<div class="entry-meta">';
-					if ( is_single() ) :
-						twentyseventeen_posted_on();
-					else :
-						echo twentyseventeen_time_link();
-						twentyseventeen_edit_link();
-					endif;
-				echo '</div><!-- .entry-meta -->';
-			endif;
-
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
-		?>
-	</header><!-- .entry-header -->
 
 	<?php if ( is_single() ) : ?>
 		<div class="entry-content">
