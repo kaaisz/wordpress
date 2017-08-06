@@ -41,6 +41,26 @@ p {
     text-align: center;
 }
 
+.has-header-image.twentyseventeen-front-page .custom-header,
+.has-header-video.twentyseventeen-front-page .custom-header,
+.has-header-image.home.blog .custom-header,
+.has-header-video.home.blog .custom-header {
+    display: table;
+    height: 300px;
+    height: calc(100vh - 75px);
+    width: 100%;
+}
+
+.has-header-image.twentyseventeen-front-page .site-branding,
+.has-header-video.twentyseventeen-front-page .site-branding,
+.has-header-image.home.blog .site-branding,
+.has-header-video.home.blog .site-branding {
+    display: block;
+    height: 100%;
+    vertical-align: bottom;
+    padding-top: 20%;
+}
+
 .site-header {
     background-color: #fff;
     position: relative;
@@ -59,10 +79,39 @@ p {
     text-transform: uppercase;
 }
 
+.site-branding{
+  height: calc(100vh - 75px);
+  /*padding: 1em 0;*/
+  position: relative;
+  -webkit-transition: margin-bottom 0.2s;
+  transition: margin-bottom 0.2s;
+  z-index: 3;
+}
+
+.site-branding-text{
+  width:100%;
+}
+
 .site-branding.close{
   display: none;
   padding: 0;
 }
+
+@media screen and (min-width: 30em){
+  .site-logo{
+    width:35%;
+    height:auto;
+  }
+
+  .site-title{
+    font-size:3rem;
+  }
+
+  .site-description{
+    font-size:1rem;
+  }
+}
+
 
 /*----------menu----------*/
 .menu-toggle {
@@ -76,7 +125,7 @@ p {
     font-size: 1.8rem;
     font-weight: 800;
     line-height: 1.5;
-    margin: 1px 0 2px auto;
+    margin: 1px 0 1px auto;
     padding: 0.5em;
     text-shadow: none;
 }
@@ -97,7 +146,7 @@ p {
 }
 
 .logo-nav.a p{
-  margin: 0.9rem 0 0.9rem 4.25rem;
+  margin: 0.9rem 0 0.9rem 4.1rem;
   font-size: 18px;
 }
 
@@ -238,6 +287,20 @@ p {
 }
 
 @media screen and (min-width: 48em){
+    #wp-custom-header.wp-custom-header{
+      position: fixed;
+    }
+
+    .has-header-image.twentyseventeen-front-page .site-branding,
+    .has-header-video.twentyseventeen-front-page .site-branding,
+    .has-header-image.home.blog .site-branding,
+    .has-header-video.home.blog .site-branding {
+        display: block;
+        height: 100%;
+        vertical-align: bottom;
+        padding-top: 10%;
+    }
+
     .site-header .menu-scroll-down .icon {
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -260,13 +323,15 @@ p {
     }
 
     .navigation-top {
+        display: block;
+        position: absolute;
+        right: 0;
         bottom: 0;
+        left: 0;
+        width: 100%;
+        height:75px;
         font-size: 14px;
         font-size: 0.875rem;
-        left: 0;
-        position: relative;
-        right: 0;
-        width: 100%;
         z-index: 3;
     }
 
@@ -288,12 +353,9 @@ p {
 
     .site-header .navigation-top .menu-scroll-down {
         color: #767676;
-        top: -5.5rem;
-        position: absolute;
+        top: -10vh;
         left: 0;
         right: 0;
-        bottom: 0;
-        text-align: center;
     }
 
     /*調整中*/
