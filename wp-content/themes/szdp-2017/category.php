@@ -11,7 +11,7 @@
  */
 
 get_header(); ?>
-
+<!-- 「カテゴリーの」記事一覧表示用のファイル -->
 <div class="wrap">
 
 	<?php if ( have_posts() ) : ?>

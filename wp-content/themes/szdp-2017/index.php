@@ -44,7 +44,7 @@
 
 					echo'<a class="seemore" href="http://localhost/wordpress/category/personal-work/">See Personal Work ></a>';
 					echo'<br><p></p><br>';
-					echo'<h3>Client Work</h3>
+					echo'<h3>Client Work <i class="fa fa-lock"></i></h3>
 							<p>-Password Required-</p>
 							<a class="seemore" href="http://localhost/wordpress/category/client-work/">See Client Work ></a>
 							<br><p></p><br>';

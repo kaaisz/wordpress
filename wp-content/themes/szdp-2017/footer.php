@@ -17,6 +17,7 @@
 		</div><!-- #content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div></div>
 			<div class="wrap">
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );
@@ -45,6 +46,6 @@
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-
+<script src="https://use.fontawesome.com/ac9858f00a.js"></script>
 </body>
 </html>
