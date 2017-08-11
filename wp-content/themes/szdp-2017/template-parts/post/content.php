@@ -19,7 +19,8 @@
 		endif;
 	?>
 
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
+
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : //ここの記述を訂正して投稿ページのタイトルを表示させる?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
@@ -38,6 +39,8 @@
 
 						if ( is_single() ) {
 							the_title( '<h1 class="entry-title">', '</h1>' );
+						} elseif ( is_front_page() && is_home() ) {
+							the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 						} else {
 							the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 						}
@@ -51,6 +54,13 @@
 	<?php if ( is_single() ) : ?>
 		<div class="entry-content">
 			<?php
+				if ( is_single() ) {
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				} elseif ( is_front_page() && is_home() ) {
+					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+				} else {
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				}
 				/* translators: %s: Name of current post */
 				the_content( sprintf(
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
