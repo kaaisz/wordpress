@@ -8,11 +8,19 @@
 					<h3>Personal Work</h3>
 						<div id="tile-list">
 								<?php
+
+								$posts = get_posts(array(
+								'posts_per_page' => 6, // 表示件数
+								'category' => '281' // カテゴリIDもしくはスラッグ名
+								));
+
 					      $cnt = 0;
-								if ( have_posts() ) :
+								//if ( have_posts() ) :
+								if($posts):
 
 										/* Start the Loop */
-										while ( have_posts() ) : the_post();
+										//while ( have_posts() ) : the_post();
+										foreach($posts as $post): setup_postdata($post);
 
 											/*
 											 * Include the Post-Format-specific template for the content.
@@ -23,7 +31,8 @@
 											get_template_part( 'template-parts/post/content', get_post_format() );
 											echo '</div>';
 
-										endwhile;
+										//endwhile;
+										endforeach;
 										echo '</div>';
 
 										// the_posts_pagination( array(
