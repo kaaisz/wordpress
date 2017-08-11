@@ -15,9 +15,9 @@
 ?>
 
 		</div><!-- #content -->
-
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div></div>
+			<div id="moveTotop" class="moveTotop"><img></img><div class="pagetop"><a href="#top"></a></div></div>
 			<div class="wrap">
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );

@@ -89,7 +89,7 @@ p {
 }
 
 .site-branding-text{
-  width:100%;
+  width:85%;
 }
 
 .site-branding.close{
@@ -114,6 +114,29 @@ p {
 
 
 /*----------menu----------*/
+/*.navigation-top {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    z-index: 3;
+}*/
+
+.site-navigation-fixed.navigation-top {
+    bottom: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 7;
+}
+
 .menu-toggle {
     background-color: transparent;
     border: 0;
@@ -155,6 +178,14 @@ p {
     top: -2px;
 }
 
+/*content*/
+.site-content .wrap{
+  padding: 0 2em 2em;
+}
+
+h2.page-title{
+  padding: 40px 0 0;
+}
 
 /*----------posts-archive----------*/
 .site-content-contain {
@@ -254,6 +285,7 @@ p {
 
 
 /*--------------Footer--------------*/
+
 .widget {
     padding-bottom: 2em;
 }
@@ -263,8 +295,34 @@ p {
     padding:0.3rem;
 }
 
+.site-footer .wrap {
+    padding-bottom: 75px;
+    padding-top: 2em;
+}
+
 .site-footer .widget-area {
     padding: 1em 0;
+}
+
+.pagetop a {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    text-indent: -9999px;
+}
+.pagetop a::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 13px;
+    left: 7px;
+    border-top: 1px solid #212121;
+    border-left: 1px solid #212121;
+    transform: rotate(45deg);
 }
 
 /*--------------Blog Page--------------*/
