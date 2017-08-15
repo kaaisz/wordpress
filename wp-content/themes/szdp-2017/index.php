@@ -10,7 +10,7 @@
 								<?php
 
 								$posts = get_posts(array(
-								'posts_per_page' => 6, // 表示件数
+								'posts_per_page' => 12, // 表示件数
 								'category' => '281' // カテゴリIDもしくはスラッグ名
 								));
 

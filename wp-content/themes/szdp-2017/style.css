@@ -226,28 +226,69 @@ h2.page-title{
     		width: 31.33%; /*横3列表示*/
     }
 }
-.post-thumbnail {
+#tile-list .entry-header {
 	margin-bottom: 0em;
 	font-size: 0px;
   position: relative;
-}
-
-#tile-list .post-thumbnail .entry-header {
-  padding: 0.5rem;/*投稿日とタイトルの周辺余白*/
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.entry-header a{
   color:white;
 }
 
-#tile-list .post-thumbnail .entry-title {
-	font-size: 14px;/*タイトル文字サイズ*/
-	font-size: 0.9rem;/*タイトル文字サイズ*/
+/*#tile-list .entry-meta {
+  padding: 0.5rem;
+  position: absolute;
+}*/
+
+/*.entry-title a{
+  color:white;
+  opacity:0;
+}*/
+
+#tile-list .entry-title a {
+  display: inline-block;
+  position: absolute;
+  padding: 3rem 2.5rem;/*投稿日とタイトルの周辺余白*/
+  width: 100%;
+  height: 98.5%;
+  top: 0;
+  left:2px;
+  right:0;
+  bottom:0;
+	font-size: 1.75rem;/*タイトル文字サイズ*/
+  background: rgba(0,0,0,0.6);
+  -webkit-transform:	rotateX(-180deg);
+	transform:		rotateX(-180deg);
+  opacity: 0;
+}
+
+#tile-list .entry-title a:after{
+  display: inline-block;
+  content: "view >";
+  position: absolute;
+  bottom:3rem;
+  right:2.5rem;
+  font-size:1.2rem;
+  background: none;
+  opacity: 0;
+  /*width:20px;
+  height:20px;
+  border-top:1px solid #fff;
+  border-right:1px solid #fff;
+  transform:rotate(45deg);*/
+}
+
+#tile-list .entry-title a:hover,
+#tile-list .entry-title a:hover:after,
+#tile-list .entry-title a:focus{
+  display: inline-block;
+	color: #fff;
+	-webkit-box-shadow:  0 0 0 rgba(255, 255, 255, 1);
+	box-shadow:  0 0 0 rgba(255, 255, 255, 1);
+  transition: none;
+  -webkit-transform:rotateX(0deg);
+	transform:rotateX(0deg);
+	opacity:1;	/* ホバーで表示する */
+  -webkit-transition:	all .8s ease;
+  transition:		all .8s ease;
 }
 
 .seemore{
