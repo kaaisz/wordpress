@@ -36,11 +36,8 @@
 					</nav><!-- .social-navigation -->
 				<?php endif;
 
-				//get_template_part( 'template-parts/footer/site', 'info' );
+				get_template_part( 'template-parts/footer/site', 'info' );
 				?>
-				<p>©️SZDP <?php
-						 echo date('Y',current_time('timestamp',0));
-						?></p>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->

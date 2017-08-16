@@ -25,15 +25,49 @@
   font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  line-height: 1.825;
+  margin: 0 0 1.25em;
+  padding: 1.5em 0 0;
+}
+
+header li a:after ,.site-footer .widget-area a:after,
+.site-footer .widget-area a:after{
+  position: absolute;
+  bottom: 0!important;
+  left: 0!important;
+  content: ''!important;
+  width: 0!important;
+  height: 3px!important;
+  background-color: #000000;
+  transition: .4s!important;
+  margin-bottom: -1px!important;
+  box-shadow:none;
+}
+
+header li a:hover:after ,.site-footer .widget-area a:focus:after,
+.site-footer .widget-area a:hover:after{
+  width: 100%;
+}
+
+p, ul, ol{
+  font-size: 14px;
+  line-height:1.825;
+}
+
+ul{
+  list-style-type: none;
+}
+
 p {
     margin: 0 0 1.5em;
     padding: 0;
-    line-height: 1.7;
 }
 
 .entry-content ul, ol {
     margin: 0 0 1.5em;
-    padding-left: 1.75rem;
+    padding-left: 1rem;
 }
 
 #masthead .wrap {
@@ -179,12 +213,27 @@ p {
 }
 
 /*content*/
+.site-content .top.wrap{
+  padding: 0 0 6em;
+}
+
+.site-content .top.wrap h3, .site-content .top.wrap p{
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.site-content .top.wrap h3{
+  font-size: 26px;
+}
+
 .site-content .wrap{
   padding: 0 2em 2em;
 }
 
 h2.page-title{
-  padding: 40px 0 0;
+  padding: 70px 0 40px;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 /*----------posts-archive----------*/
@@ -201,11 +250,12 @@ h2.page-title{
 #tile-list {
 		width: 100%;
 		overflow: hidden;
+    margin-bottom: 5rem;
 }
 .tile-entry {
 		float: left;
-		margin: 0 1% 1.2em;/*余白（上、左右、下）*/
-		width: 48%;/*横2列表示*/
+		margin: 0;/*余白（上、左右、下）*/
+		width: 50%;/*横2列表示*/
 		padding-bottom: 0;
 		background-color: #fff;/*各記事の背景色*/
 		/*border: 1px solid #eee;/*各記事の枠線*/
@@ -223,7 +273,7 @@ h2.page-title{
 }
 @media screen and (min-width: 60em) {
     .tile-entry {
-    		width: 31.33%; /*横3列表示*/
+    		width: 33.33%; /*横3列表示*/
     }
 }
 #tile-list .entry-header {
@@ -233,31 +283,30 @@ h2.page-title{
   color:white;
 }
 
-/*#tile-list .entry-meta {
-  padding: 0.5rem;
-  position: absolute;
-}*/
-
-/*.entry-title a{
-  color:white;
-  opacity:0;
-}*/
+#tile-list .entry-header .entry-title{
+  margin-bottom: -6px;
+  text-align: left;
+}
 
 #tile-list .entry-title a{
-  width: 100%;
-  height: 98.5%;
+background-size: 0;
   display: inline-block;
   position: absolute;
   top: 0;
   left:2px;
   right:0;
   bottom:0;
+  color:white;
   opacity: 0;
-  padding: 1rem;/*投稿日とタイトルの周辺余白*/
+  padding: 0.5rem;/*投稿日とタイトルの周辺余白*/
   background: rgba(0,0,0,0.6);
-	font-size: 1.75rem;/*タイトル文字サイズ*/
-  -webkit-transform:	rotateX(-180deg);
-	transform:		rotateX(-180deg);
+	font-size: 0.95rem;/*タイトル文字サイズ*/
+}
+
+#tile-list .entry-title a:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
 }
 
 #tile-list .entry-title a:after{
@@ -266,7 +315,7 @@ h2.page-title{
   position: absolute;
   bottom:1rem;
   right:1rem;
-  font-size:1.2rem;
+  font-size:0.75rem;
   background: none;
   opacity: 0;
   /*width:20px;
@@ -277,31 +326,139 @@ h2.page-title{
 }
 
 #tile-list .entry-title a:hover,
-#tile-list .entry-title a:hover:after,
 #tile-list .entry-title a:focus{
+  background-size: 100% 98%;
   display: inline-block;
 	color: #fff;
 	-webkit-box-shadow:  0 0 0 rgba(255, 255, 255, 1);
 	box-shadow:  0 0 0 rgba(255, 255, 255, 1);
   transition: none;
-  -webkit-transform:rotateX(0deg);
-	transform:rotateX(0deg);
+  /*-webkit-transform:rotateY(0deg);
+	transform:rotateY(0deg);*/
 	opacity:1;	/* ホバーで表示する */
-  -webkit-transition:	all .8s ease;
-  transition:		all .8s ease;
+  -webkit-transition:	all .3s linear;
+  transition:		all .3s linear;
+  white-space: normal;
 }
 
-.seemore{
-  display: table;
+#tile-list .entry-title a:hover:after{
+  color: #fff;
+  opacity:1;	/* ホバーで表示する */
+  -webkit-transition:	all .3s linear;
+  transition:		all .3s linear;
+}
+
+@media screen and (min-width: 30em) {
+  #tile-list .entry-title a {
+		font-size: 1.25rem; /*横3列表示*/
+    -webkit-transform:	rotateX(0);
+    transform:		rotateX(0);
+  }
+
+  #tile-list .entry-title a:after{
+    font-size:0.75rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  #tile-list .entry-title a {
+    height: 98%;
+    padding: 1.5rem;
+		font-size: 2.25rem;/*横2列表示*/
+  }
+  #tile-list .entry-title a:after{
+    font-size:1.75rem;
+  }
+}
+@media screen and (min-width: 680px) {
+  #tile-list .entry-title a {
+    height:98.6%;
+		font-size: 1.75rem;/*横2列表示*/
+    opacity: 0;
+    /*-webkit-transform:	rotateX(-180deg);
+    transform:		rotateX(-180deg);*/
+  }
+  #tile-list .entry-title a:after{
+    font-size:1.2rem;
+  }
+}
+
+/*.seemore{
+  position: relative;
+  display: block;
   font-size:1.25rem;
-  padding:0.2rem;
-  border-bottom: 2px solid #000;
-  margin-left: auto;
+  padding:0.35rem;
+  margin:auto;
+  text-align: center;
+}*/
+
+.seemore {
+  display: table;
+  position: relative;
+  font-size: 1.25rem;
+  margin: auto;
+	padding: 10px;
+	color: #000;
+	font-weight: 500;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.seemore::before,
+.seemore::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #000;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.seemore::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.seemore::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.seemore:hover,
+.seemore:focus {
+	color: #000;
+}
+
+.seemore:hover::before,
+.seemore:focus::before,
+.seemore:hover::after,
+.seemore:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
 }
 
 article .post-thumbnail a img {
   /*display: none;*/
 }
+
+.toContact{
+  text-align: center;
+}
+
 
 
 /*----------Pagenation----------*/
@@ -319,16 +476,43 @@ article .post-thumbnail a img {
     display: inline-block;
 }
 
-.next.page-numbers, .prev.page-numbers{
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    text-decoration: none;
-    -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+
+.prev.page-numbers,
+.next.page-numbers {
+	background-color:#fff!important;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 24px;
+	font-size: 1.5rem;
+	line-height: 1;
+	padding: 0.25em 0.5em 0.4em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-decoration: none;
+  -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+}
+/*--------------bio--------------*/
+.bioImg{
+  width: 210px;
+  height: 210px;
+  margin: 65px auto;
+  overflow: hidden;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
+.bioImg img {
+  max-width: 300px;
+  margin: -45px 0 0 -45px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 
 /*--------------Footer--------------*/
 
@@ -342,7 +526,7 @@ article .post-thumbnail a img {
 }
 
 .site-footer .wrap {
-    padding-bottom: 75px;
+    padding-bottom: 35px;
     padding-top: 2em;
 }
 
@@ -369,6 +553,21 @@ article .post-thumbnail a img {
     border-top: 1px solid #212121;
     border-left: 1px solid #212121;
     transform: rotate(45deg);
+}
+
+.social-navigation{
+  width:100%;
+  text-align: center;
+}
+
+.social-navigation a{
+  margin: 1em 0.5em;
+}
+
+.social-navigation + .site-info{
+  width: 100%;
+  margin-left:0;
+  text-align:center;
 }
 
 /*--------------Blog Page--------------*/
@@ -402,7 +601,7 @@ article .post-thumbnail a img {
         display: block;
         height: 100%;
         vertical-align: bottom;
-        padding-top: 10%;
+        padding-top: 10rem;
     }
 
     .site-header .menu-scroll-down .icon {
@@ -519,6 +718,12 @@ article .post-thumbnail a img {
         clear: both;
         float: right;
         width: 100%;
+    }
+
+    /*----------single-page----------*/
+    #post-2328, #post-2344{
+      max-width: 680px;
+      margin: auto;
     }
 }
 

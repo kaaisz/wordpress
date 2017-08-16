@@ -18,7 +18,7 @@
 			<div class="site-branding-text">
 				<?php if ( is_front_page() ) : ?>
 					<img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/logo-ffffff_animated.svg"></img>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 					<?php $description = get_bloginfo( 'description', 'display' );
 
 					if ( $description || is_customize_preview() ) : ?>
