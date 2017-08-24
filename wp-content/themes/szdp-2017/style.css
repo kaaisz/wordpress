@@ -85,6 +85,37 @@ p {
     width: 100%;
 }
 
+.site-branding{
+  background: linear-gradient(142deg, #6d8acd, #8f7198, #c39191, #c9c9c9);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 75s ease infinite;
+  -moz-animation: AnimationName 75s ease infinite;
+  -o-animation: AnimationName 75s ease infinite;
+  animation: AnimationName 75s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+
+.site-branding,
 .has-header-image.twentyseventeen-front-page .site-branding,
 .has-header-video.twentyseventeen-front-page .site-branding,
 .has-header-image.home.blog .site-branding,
@@ -92,7 +123,7 @@ p {
     display: block;
     height: 100%;
     vertical-align: bottom;
-    padding-top: 20%;
+    padding-top: 25%;
 }
 
 .site-header {
@@ -103,6 +134,11 @@ p {
 .site-logo{
   width:305px;
   height:auto;
+}
+
+.site-title{
+  font-size: 1.45rem;
+  text-transform: none;
 }
 
 .page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title {
@@ -122,6 +158,10 @@ p {
   z-index: 3;
 }
 
+.site-branding.close{
+  display: none!important;
+}
+
 .site-branding-text{
   width:85%;
 }
@@ -133,7 +173,7 @@ p {
 
 @media screen and (min-width: 30em){
   .site-logo{
-    width:35%;
+    width:80%;
     height:auto;
   }
 
@@ -146,6 +186,28 @@ p {
   }
 }
 
+@media screen and (min-width: 48em){
+  /*for iPad*/
+  .site-logo{
+    width:48%;
+    height:auto;
+  }
+
+  .site-title{
+    font-size:3rem;
+  }
+
+  .site-description{
+    font-size:1rem;
+  }
+}
+
+
+@media screen and (min-width: 1025px){
+  .site-logo{
+    width: 35%;
+  }
+}
 
 /*----------menu----------*/
 /*.navigation-top {
@@ -286,6 +348,7 @@ h2.page-title{
 #tile-list .entry-header .entry-title{
   margin-bottom: -6px;
   text-align: left;
+  font-weight: 500;
 }
 
 #tile-list .entry-title a{
@@ -589,6 +652,7 @@ article .post-thumbnail a img {
   display: none;
 }
 
+
 @media screen and (min-width: 48em){
     #wp-custom-header.wp-custom-header{
       position: fixed;
@@ -601,7 +665,7 @@ article .post-thumbnail a img {
         display: block;
         height: 100%;
         vertical-align: bottom;
-        padding-top: 10rem;
+        padding-top: 35%;
     }
 
     .site-header .menu-scroll-down .icon {
@@ -725,6 +789,38 @@ article .post-thumbnail a img {
       max-width: 680px;
       margin: auto;
     }
+}
+
+@media screen and (min-width: 60em){
+  .has-header-image.twentyseventeen-front-page .site-branding,
+  .has-header-video.twentyseventeen-front-page .site-branding,
+  .has-header-image.home.blog .site-branding,
+  .has-header-video.home.blog .site-branding {
+      display: block;
+      height: 100%;
+      vertical-align: bottom;
+      padding-top: 11rem;
+  }
+
+  .site-title{
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-height: 850px){
+  .has-header-image.twentyseventeen-front-page .site-branding,
+  .has-header-video.twentyseventeen-front-page .site-branding,
+  .has-header-image.home.blog .site-branding,
+  .has-header-video.home.blog .site-branding {
+      display: block;
+      height: 100%;
+      vertical-align: bottom;
+      padding-top: 20rem;
+  }
+
+  .site-title{
+    font-size: 2.25rem;
+  }
 }
 
 @media screen and (min-width: 30em){
