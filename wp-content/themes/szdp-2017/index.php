@@ -6,6 +6,8 @@
 			<section id="works">
 				<h2 class="page-title">Works</h2>
 					<h3>Personal Work</h3>
+					<div id="trigger-fadein"></div>
+					<div id="fadein" class="type01 box01 opacity0">
 						<div id="tile-list">
 								<?php
 
@@ -29,11 +31,11 @@
 											 */
 											echo '<div class="tile-entry">';
 											get_template_part( 'template-parts/post/content', get_post_format() );
-											echo '</div>';
+											echo '</div><!--tile-entry-->';
 
 										//endwhile;
 										endforeach;
-										echo '</div>';
+										echo '</div><!--tile-list--></div><!--fadein-->';
 
 										// the_posts_pagination( array(
 										// 	'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) .
@@ -47,21 +49,23 @@
 										// 	// . __( 'Page', 'twentyseventeen' )
 										// 	. ' </span>',
 										// ) );
+										else :
 
-										echo'<div class="seemore-before"><a class="seemore" href="http://localhost/wordpress/category/personal-work/">View Personal Work ></a></div>';
-										echo'<br><p></p><br>';
-										echo'<h3>Client Work <i class="fa fa-lock"></i></h3>
-												<p>-Password Required-</p>
-												<div class="seemore-before"><a class="seemore" href="http://localhost/wordpress/category/client-work/">View Client Work ></a></div>
-												<br><p></p><br>';
+												get_template_part( 'template-parts/post/content', 'none' );
 
-								else :
-
-										get_template_part( 'template-parts/post/content', 'none' );
-
-								endif;?>
+										endif;?>
+					<div class="seemore-before">
+						<a class="seemore" href="http://localhost/wordpress/category/personal-work/">View More Personal Work ></a>
+					</div>
+					<br><p></p><br>
+					<h3>Project Work <i class="fa fa-lock"></i></h3>
+					<p>-Password Required-</p>
+					<div class="seemore-before">
+						<a class="seemore" href="http://localhost/wordpress/category/client-work/">View Project Work ></a>
+					</div>
+					<br><p></p><br>
 			</section>
-			<section>
+			<section id="fadein-trigger">
 				<h2 id="bio" class="page-title">Biography</h2>
 					<div class="bioImg">
 						<img src="http://localhost/wordpress/wp-content/uploads/2017/08/szdp_prof.jpg" />
@@ -70,7 +74,7 @@
 					<p>Born in 2 Sep, Saitama, JP<br>
 						Developing & Directing Web and Graphic Based on fashion and lifestyle cultural experience.</p>
 						<div class="seemore-before">
-							<a class="seemore" href="http://localhost/wordpress/biography/">Details ></a>
+							<a class="seemore" href="http://localhost/wordpress/biography/">View Details ></a>
 						</div>
 	    </section>
 			<section>

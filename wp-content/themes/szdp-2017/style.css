@@ -86,7 +86,7 @@ p {
 }
 
 .site-branding{
-  background: linear-gradient(142deg, #6d8acd, #8f7198, #c39191, #c9c9c9);
+  background: linear-gradient(142deg, #c9c9c9, #c39191, #8f7198, #6d8acd);
   background-size: 800% 800%;
   -webkit-animation: AnimationName 75s ease infinite;
   -moz-animation: AnimationName 75s ease infinite;
@@ -325,7 +325,7 @@ h2.page-title{
 }
 @media screen and (min-width: 30em) {
 .tile-entry {
-		width: 31.33%; /*横3列表示*/
+		width: 33.33%; /*横3列表示*/
 }
 }
 @media screen and (min-width: 48em) {
@@ -652,6 +652,37 @@ article .post-thumbnail a img {
   display: none;
 }
 
+article .sc__base{
+  box-shadow: 0 0 10px #bbb;
+}
+
+article .frame{
+  background: #eee;
+  padding: .8rem;
+  display: grid;
+  float: left;
+  margin-bottom: 4%;
+}
+
+@media screen and (min-width: 48em){
+  article .sc__base{
+    box-shadow: 0 0 20px #bbb;
+  }
+
+  article .frame {
+    padding: .9rem;
+  }
+
+  article .frame.half.left{
+    width:48%;
+    margin:2% 2% 4% 0;
+  }
+
+  article .frame.half.right{
+    width:48%;
+    margin:2% 0 4% 2%;
+  }
+}
 
 @media screen and (min-width: 48em){
     #wp-custom-header.wp-custom-header{
@@ -828,3 +859,16 @@ article .post-thumbnail a img {
         padding: 8em 0;
     }
 }
+
+
+/*animation - fade effect*/
+#trigger-fadein {
+  position: relative;
+  opacity: 0;
+  transform: translate(0, 40px);
+  transition: all 1s cubic-bezier(0.155, 0.91, 0.695, 0.95);
+}
+/*.js-scroll-fade.is-animation {
+  opacity: 1;
+  transform: translate(0, 0);
+}*/

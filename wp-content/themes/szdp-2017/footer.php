@@ -16,7 +16,6 @@
 
 		</div><!-- #content -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div></div>
 			<div id="moveTotop" class="moveTotop"><img></img><div class="pagetop"><a href="#top"></a></div></div>
 			<div class="wrap">
 				<?php
@@ -43,6 +42,7 @@
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
+<script type="text/javascript">jQuery(window).fadeThis();</script>
 <script src="https://use.fontawesome.com/ac9858f00a.js"></script>
 </body>
 </html>
