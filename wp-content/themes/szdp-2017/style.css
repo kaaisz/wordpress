@@ -682,6 +682,21 @@ article .frame{
     width:48%;
     margin:2% 0 4% 2%;
   }
+
+  article .frame.three.right{
+    width:30.6%;
+    margin:2% 2% 4% 0;
+  }
+
+  article .frame.three.center{
+    width:30.6%;
+    margin:2%;
+  }
+
+  article .frame.three.left{
+    width:30.6%;
+    margin:2% 0 4% 2%;
+  }
 }
 
 @media screen and (min-width: 48em){
