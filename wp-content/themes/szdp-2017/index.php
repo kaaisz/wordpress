@@ -13,7 +13,7 @@
 
 								$posts = get_posts(array(
 								'posts_per_page' => 12, // 表示件数
-								'category' => '281' // カテゴリIDもしくはスラッグ名
+								'category' => '3' // カテゴリIDもしくはスラッグ名
 								));
 
 					      $cnt = 0;
@@ -55,33 +55,33 @@
 
 										endif;?>
 					<div class="seemore-before">
-						<a class="seemore" href="http://localhost/wordpress/category/personal-work/">View More Personal Work ></a>
+						<a class="seemore" href="<?php echo(get_category_link(3));?>">View More Personal Work ></a>
 					</div>
 					<br><p></p><br>
 					<h3>Project Work <i class="fa fa-lock"></i></h3>
 					<p>-Password Required-</p>
 					<div class="seemore-before">
-						<a class="seemore" href="http://localhost/wordpress/category/client-work/">View Project Work ></a>
+						<a class="seemore" href="<?php echo(get_category_link(4));?>">View Project Work ></a>
 					</div>
 					<br><p></p><br>
 			</section>
 			<section id="fadein-trigger">
 				<h2 id="bio" class="page-title">Biography</h2>
 					<div class="bioImg">
-						<img src="http://localhost/wordpress/wp-content/uploads/2017/08/szdp_prof.jpg" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/szdp_prof.jpg" />
 					</div>
 			    <h3>Kaai Suzuki</h3>
 					<p>Born in 2 Sep, Saitama, JP<br>
 						Developing & Directing Web and Graphic Based on fashion and lifestyle cultural experience.</p>
 						<div class="seemore-before">
-							<a class="seemore" href="http://localhost/wordpress/biography/">View Details ></a>
+							<a class="seemore" href="<?php bloginfo('template_url');?>/biography/">View Details ></a>
 						</div>
 	    </section>
 			<section>
 		    <h2 id="contact" class="page-title">Contact</h2>
 			    <p>Please let me know if you're impressed or interested.</p>
 			    <div class="toContact">
-						<a href="http://localhost/wordpress/contact">
+						<a href="<?php bloginfo('template_url');?>/contact">
 							<button>Contact</button>
 						</a>
 					</div>

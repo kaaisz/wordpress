@@ -63,6 +63,7 @@ ul{
 p {
     margin: 0 0 1.5em;
     padding: 0;
+    line-height: 1.65;
 }
 
 .entry-content ul, ol {
@@ -86,8 +87,9 @@ p {
 }
 
 .site-branding{
+  /*background:#fff;*/
   background: linear-gradient(142deg, #c9c9c9, #c39191, #8f7198, #6d8acd);
-  background-size: 800% 800%;
+  background-size: 1200% ;
   -webkit-animation: AnimationName 75s ease infinite;
   -moz-animation: AnimationName 75s ease infinite;
   -o-animation: AnimationName 75s ease infinite;
@@ -124,6 +126,7 @@ p {
     height: 100%;
     vertical-align: bottom;
     padding-top: 25%;
+    position: fixed;
 }
 
 .site-header {
@@ -147,10 +150,11 @@ p {
     font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+    line-height: 1.4;
 }
 
 .site-branding{
-  height: calc(100vh - 75px);
+  height: calc(100vh);
   /*padding: 1em 0;*/
   position: relative;
   -webkit-transition: margin-bottom 0.2s;
@@ -158,16 +162,16 @@ p {
   z-index: 3;
 }
 
-.site-branding.close{
-  display: none!important;
-}
-
 .site-branding-text{
   width:85%;
 }
 
+body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a {
+    color: #fff;
+}
+
 .site-branding.close{
-  display: none;
+  display: none!important;
   padding: 0;
 }
 
@@ -210,18 +214,11 @@ p {
 }
 
 /*----------menu----------*/
-/*.navigation-top {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    font-size: 14px;
-    font-size: 0.875rem;
-    z-index: 3;
-}*/
+.navigation-top {
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  z-index:333;
+}
 
 .site-navigation-fixed.navigation-top {
     bottom: auto;
@@ -301,7 +298,7 @@ h2.page-title{
 /*----------posts-archive----------*/
 .site-content-contain {
     background-color: #fff;
-    /*position: absolute;*/
+    z-index:3;
 }
 
 .single-featured-image-header{
@@ -640,6 +637,11 @@ article .post-thumbnail a img {
     margin: auto;
 }
 
+.entry-title:not(:first-child) {
+    padding-top: 0;
+    line-height: 1.4;
+}
+
 .single .byline, .group-blog .byline {
     display: none;
 }
@@ -721,6 +723,10 @@ article .frame{
         color: white;
     }
 
+    .custom-header-media:before{
+      background:#fff!important;
+    }
+
     .has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-video .custom-header-media iframe, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
         height: 100vh;
         width: 100%;
@@ -765,10 +771,11 @@ article .frame{
     }
 
     .site-header .navigation-top .menu-scroll-down {
-        color: #767676;
-        top: -10vh;
-        left: 0;
-        right: 0;
+      color: #767676;
+      top: 80%;
+      left: 0;
+      right: 0;
+      position: fixed;
     }
 
     /*調整中*/
